@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('directivesApp').directive('centCurrentTime', ['$interval', 'dateFilter', function($interval, dateFilter) {
 
     function link(scope, element, attrs) {

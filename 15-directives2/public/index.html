@@ -2,14 +2,19 @@
 <html ng-app="directivesApp">
     <head>
         <!-- Javascript includes -->
-        <script src="lib/angular/angular.min.js"></script>        
-        <script src="app.js"></script>        
+        <script src="lib/angular/angular.min.js"></script>
+        <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="app.js"></script>
         <script src="controllers/clock.js"></script>
+        <script src="controllers/select-frameworks.js"></script>
         <script src="directives/cent-current-time.js"></script>
+        <script src="directives/cent-find-select.js"></script>
+        <script src="directives/cent-enter.js"></script>
         
         <!-- CSS includes -->
         <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="lib/components-font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="app.css">
     </head>
     <body>
         
@@ -31,6 +36,32 @@
                         <cent-current-time></cent-current-time>
                     </div>
                     
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Find and Select</h3>
+                </div>
+                <div class="panel-body">
+        
+                    <div ng-controller="SelectFrameworkController">
+                        
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <label>Lists of Frameworks:</label>                        
+                                <cent-find-select text="Select a framework" model="frameworkSelected" list="frameworks"></cent-find-select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                Framework selected: <span class="red" ng-bind="frameworkSelected" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

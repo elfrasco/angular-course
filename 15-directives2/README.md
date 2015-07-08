@@ -1,6 +1,6 @@
 # Directives 2
 
-Bla blabla.
+Este ejemplo muestra el uso de varias directivas, internas y externas, que manipulan el DOM.
 
 ## ¿Cómo ejecutar el ejemplo?
 

@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('directivesApp', []);
+angular.module('directivesApp', ['ui.bootstrap']);

@@ -1,0 +1,27 @@
+<input type="hidden" ng-model="model" ng-required="required">
+
+<div class="btn-group" dropdown is-open="toggleOpen" ng-click="toggleOpen = true">
+
+    <button type="button" class="btn btn-sm btn-default dropdown-toggle" dropdown-toggle>
+        <span data-bind="label" ng-hide="model">{{text}}</span>
+        <span data-bind="label" ng-show="model">{{model}}</span>&nbsp;<span class="caret"></span>
+    </button>
+
+    <ul class="dropdown-menu" role="menu">
+        <li>
+            <div class="input-group">
+                <input id="queryInput" 
+                    placeholder="Search"
+                    ng-model="query" type="text" class="form-control"
+                    ng-click="$event.stopPropagation();"
+                    cent-enter="tryToSetFieldName(query)" />
+                <i class="form-control-feedback fa fa-search fa-inside-input"></i>
+            </div>
+        </li>
+        <li ng-repeat="field in list | filter:query">
+            <a href="javascript:void(0)" ng-click="setFieldName(field)">
+                <span ng-bind="field" />
+            </a>
+        </li>
+    </ul>
+</div>
