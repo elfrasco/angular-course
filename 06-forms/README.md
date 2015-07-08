@@ -17,4 +17,10 @@ Si es la primera vez que se ejecutan, se deben bajar las dependencias con npm:
 > npm install
 
 Parado en el root del proyecto, ejecutar:
+> node_modules/karma/bin/karma start
+
+Si no queremos usar el cliente de karma que acaba de instalar NPM, podemos instalar karma-cli globalmente:
+> npm install -g karma-cli
+
+Y luego ejecutar:
 > karma start
