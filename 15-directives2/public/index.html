@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="directivesApp">
+    <head>
+        <!-- Javascript includes -->
+        <script src="lib/angular/angular.min.js"></script>        
+        <script src="app.js"></script>        
+        <script src="controllers/clock.js"></script>
+        <script src="directives/cent-current-time.js"></script>
+        
+        <!-- CSS includes -->
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="lib/components-font-awesome/css/font-awesome.min.css">
+    </head>
+    <body>
+        
+        <div class="page-header">
+            <h1>Directives</h1>
+        </div>
+        
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Current Time</h3>
+                </div>
+                <div class="panel-body">
+
+                    <div ng-controller="ClockController">
+                        Date format: <input ng-model="format"> <hr/>
+                        Current time is: <span cent-current-time="format"></span>
+                        <br/>
+                        <cent-current-time></cent-current-time>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+    </body>
+</html>
